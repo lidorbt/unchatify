@@ -1,7 +1,5 @@
-// src/App.tsx
-
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ObfuscatorPage from './pages/ObfuscatorPage';
 import AboutPage from './pages/AboutPage';
 import Navbar from './components/Navbar';
@@ -17,6 +15,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<ObfuscatorPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
       </div>
