@@ -15,6 +15,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<ObfuscatorPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/unchatify" element={<AboutPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
