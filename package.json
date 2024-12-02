@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build && echo 'www.unchatify.com' > dist/CNAME",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
