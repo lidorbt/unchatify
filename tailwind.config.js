@@ -1,10 +1,12 @@
+import tailwindSCrollbar from 'tailwind-scrollbar'
+
 // tailwind.config.js
-module.exports = {
+export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {},
   },
   plugins: [
-    require('tailwind-scrollbar'),
+    tailwindSCrollbar(),
   ],
 };
