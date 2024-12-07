@@ -10,7 +10,7 @@ interface NavbarProps {
   onServiceAgreementClick: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, onServiceAgreementClick }) => {
+const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   return (
     <nav className="w-full bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -36,12 +36,12 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, onServiceAgreeme
           >
             {darkMode ? <Sun className="h-5 w-5 text-gray-700 dark:text-gray-300" /> : <Moon className="h-5 w-5 text-gray-700 dark:text-gray-300" />}
           </button>
-          <button
+          {/* <button
             onClick={onServiceAgreementClick}
             className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hidden md:block"
           >
             Service Agreement
-          </button>
+          </button> */}
         </div>
       </div>
     </nav>
