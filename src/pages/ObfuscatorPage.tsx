@@ -11,7 +11,7 @@ import Info from '../components/Info';
 const ObfuscatorPage: React.FC = () => {
   const [inputText, setInputText] = useState<string>('');
   const [obfuscatedText, setObfuscatedText] = useState<string>('');
-  const [obfuscationType, setObfuscationType] = useState<ObfuscationType>('linguistic');
+  const [obfuscationType, setObfuscationType] = useState<ObfuscationType>('text');
   const [obfuscationLevel, setObfuscationLevel] = useState<ObfuscationLevel>('medium');
   const [history, setHistory] = useState<string[]>([]);
   const [customStrategies, setCustomStrategies] = useState<((text: string) => string)[]>([]);

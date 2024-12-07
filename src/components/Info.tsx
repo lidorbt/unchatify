@@ -1,4 +1,3 @@
-import React from 'react';
 import { Wand2, Code, Brain } from 'lucide-react';
 
 const Info = () => (

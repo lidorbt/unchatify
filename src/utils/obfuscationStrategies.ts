@@ -56,7 +56,7 @@ function synonymReplacementStrategy(input: string, ratio: number): string {
 
 function codeRenameVariables(input: string): string {
   // A simple example: replace variable names "varX" with "vx_XXXX"
-  return input.replace(/\bvar([A-Za-z0-9_]+)\b/g, (match, p1) => `vx_${p1}_${Math.floor(Math.random()*1000)}`);
+  return input.replace(/\bvar([A-Za-z0-9_]+)\b/g, (_, p1) => `vx_${p1}_${Math.floor(Math.random()*1000)}`);
 }
 
 function codeAddComments(input: string): string {
