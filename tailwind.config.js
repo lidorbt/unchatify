@@ -1,12 +1,24 @@
 import tailwindSCrollbar from 'tailwind-scrollbar'
 
-// tailwind.config.js
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        page: {
+          light: '#ffffff',
+          dark: '#1f1f1f',
+        },
+        primary: {
+          light: '#4f46e5',
+          dark: '#818cf8',
+        },
+      },
+    }
   },
+
   plugins: [
-    tailwindSCrollbar(),
+    tailwindSCrollbar({ nocompatible: true }),
   ],
 };

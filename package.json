@@ -9,11 +9,14 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build && echo 'www.unchatify.com' > dist/CNAME",
-    "deploy": "gh-pages -d dist"
+    "publish": "gh-pages -d dist --cname www.unchatify.com",
+    "deploy": "npm run predeploy && npm run publish"
   },
   "dependencies": {
+    "@playkit-js/detect-ad-block": "^1.1.10",
     "@types/node": "^22.10.1",
     "@types/react-router-dom": "^5.3.3",
+    "adblock-detect-react": "^1.3.1",
     "lucide-react": "^0.462.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

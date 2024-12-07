@@ -1,27 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import ObfuscatorPage from './pages/ObfuscatorPage';
-import AboutPage from './pages/AboutPage';
-import Navbar from './components/Navbar';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 
-const App: React.FC = () => {
+function App() {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   return (
     <Router>
-      <div className="flex flex-col h-screen">
-        <div className="h-9">
-          <Navbar />
-        </div>
-        <div className="flex-1 overflow-y-auto">
-          <Routes>
-            <Route path="/" element={<ObfuscatorPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/unchatify" element={<AboutPage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </div>
+      <div className="h-screen w-full flex flex-col bg-white dark:bg-gray-900 dark:text-gray-100 overflow-hidden">
+        <Routes>
+          <Route path="/" element={<HomePage darkMode={darkMode} setDarkMode={setDarkMode} />} />
+        </Routes>
       </div>
     </Router>
   );
-};
+}
 
 export default App;
