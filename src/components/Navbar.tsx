@@ -15,18 +15,18 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, onServiceAgreeme
     <nav className="w-full bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center text-xl font-bold text-gray-900 dark:text-gray-100 gap-x-3">
-          <img 
-            src={darkMode ? brainLogoLight : brainLogoDark} 
-            alt="logo" 
-            className="w-8 h-8" 
+          <img
+            src={darkMode ? brainLogoLight : brainLogoDark}
+            alt="logo"
+            className="w-8 h-8"
           />
-          AI Text Obfuscator
+          Unchatify
         </Link>
         <div className="flex items-center space-x-4">
-          <a href="#features" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm font-medium">
+          <a href="#features" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm font-medium hidden md:block">
             Features
           </a>
-          <a href="#obfuscate" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm font-medium">
+          <a href="#obfuscate" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm font-medium hidden md:block">
             Tool
           </a>
           <button
@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, onServiceAgreeme
           </button>
           <button
             onClick={onServiceAgreementClick}
-            className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+            className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hidden md:block"
           >
             Service Agreement
           </button>

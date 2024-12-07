@@ -53,7 +53,7 @@ const HomePage: React.FC<HomePageProps> = ({ darkMode, setDarkMode }) => {
       />
 
       <div className="flex-1 overflow-auto scroll-smooth px-4 sm:px-6 lg:px-8 pb-24 pt-4 scrollbar-thin scrollbar-thumb-gray-400 dark:scrollbar-thumb-gray-600 scrollbar-track-gray-200 dark:scrollbar-track-gray-800">
-        
+
         {/* Hero Section */}
         <section className="mt-6 mb-10 flex flex-col items-center text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
@@ -66,18 +66,6 @@ const HomePage: React.FC<HomePageProps> = ({ darkMode, setDarkMode }) => {
             <a href="#obfuscate" className="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
               Start Obfuscating
             </a>
-          </div>
-
-          {/* Desktop Ad (Top banner) */}
-          <div className="hidden md:block justify-center mt-8 text-xs text-gray-500 dark:text-gray-400 italic border border-gray-200 dark:border-gray-700 rounded p-2 w-full max-w-2xl mx-auto">
-            {/* Google AdSense Top Banner */}
-            <ins className="adsbygoogle"
-              style={{ display: 'block' }}
-              data-ad-client="YOUR_ADSENSE_CLIENT_ID"
-              data-ad-slot="1234567890"
-              data-ad-format="horizontal"
-              data-full-width-responsive="true"></ins>
-            <script>{`(adsbygoogle = window.adsbygoogle || []).push({});`}</script>
           </div>
         </section>
 
@@ -122,18 +110,6 @@ const HomePage: React.FC<HomePageProps> = ({ darkMode, setDarkMode }) => {
               </p>
             </div>
           </div>
-
-          {/* Desktop Sidebar Ad (Large screens) */}
-          <div className="hidden lg:flex justify-center mt-8">
-            <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg w-64 h-auto flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 italic p-2">
-              {/* Google AdSense Sidebar Ad */}
-              <ins className="adsbygoogle"
-                style={{ display: 'block', width: '300px', height: '600px' }}
-                data-ad-client="YOUR_ADSENSE_CLIENT_ID"
-                data-ad-slot="0987654321"></ins>
-              <script>{`(adsbygoogle = window.adsbygoogle || []).push({});`}</script>
-            </div>
-          </div>
         </section>
 
         {/* Obfuscation Tool Section */}
@@ -167,22 +143,15 @@ const HomePage: React.FC<HomePageProps> = ({ darkMode, setDarkMode }) => {
 
             <History history={history} />
           </div>
-        </section>
-
-        {/* Mobile Ad (Bottom) */}
-        <div className="md:hidden mt-8 flex justify-center">
-          <div className="w-full text-center py-4">
-            {/* Google AdSense Mobile Ad */}
-            <ins className="adsbygoogle"
-              style={{ display: 'block' }}
-              data-ad-client="YOUR_ADSENSE_CLIENT_ID"
-              data-ad-slot="1122334455"
-              data-ad-format="auto"
-              data-full-width-responsive="true"></ins>
-            <script>{`(adsbygoogle = window.adsbygoogle || []).push({});`}</script>
+          <div className='mx-auto pt-4 max-w-4xl'>
+            <button
+              onClick={() => setServiceAgreementOpen(true)}
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+            >
+              Service Agreement
+            </button>
           </div>
-        </div>
-
+        </section>
       </div>
 
       <Footer />
